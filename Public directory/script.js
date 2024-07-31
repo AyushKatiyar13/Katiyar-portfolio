@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("Sending data:", JSON.stringify(jsonData));
 
-      fetch("https://new-portfolio-lfys.onrender.com/send", { // Updated URL to your server
+      fetch("https://new-portfolio-lfys.onrender.com", { // Updated URL to your server
         method: "POST",
         headers: {
           "Content-Type": "application/json",
