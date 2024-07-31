@@ -1,0 +1,1313 @@
+/* Base Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #eeeeee;
+    color: #222831;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #393e46;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    background-color: #333;
+    background-size: auto;
+    background-position: unset;
+    padding: 10px;
+    width: 100px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image Hover Animation */
+.img-fluid.rounded-circle {
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 420px;
+    /* Adjust the size of the image */
+    height: 420px;
+    /* Adjust the size of the image */
+}
+
+.img-fluid.rounded-circle:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Increases shadow on hover */
+}
+
+.lead {
+    margin-left: 120px;
+    font-size: 1.2rem;
+    transition: color 0.3s, border-color 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Fluid */
+.container-fluid {
+    padding: 5rem 1rem;
+}
+
+/* Welcome Section */
+section {
+    background: #ffffff;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Heading Animation */
+h1.display-4 {
+    font-size: 3rem;
+    color: #333;
+    margin: 40px 0 1rem;
+    animation: bounce 2s infinite;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Paragraph Styling */
+p.lead {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* Highlighted Text */
+p.lead span.highlight {
+    color: #00adb5;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Profile Photo Animation */
+.img-fluid {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-fluid:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Resume Button */
+.resume_button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #00adb5;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: blink 1.5s infinite;
+    /* Blinking effect */
+    margin-left: 158px;
+}
+.resume_button{
+    /* display: flex; */
+    width: auto;
+}
+.resume_button:hover {
+    transform: scale(1.05);
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+
+    0%,
+    100% {
+        background-color: #00adb5;
+        opacity: 1;
+    }
+
+    50% {
+        background-color: #008c95;
+        opacity: 0.7;
+    }
+}
+
+/* Remove Extra Background and Border Effects */
+body,
+section {
+    border: none;
+    background: transparent;
+}
+
+section {
+    border: none;
+    background-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+
+    p.lead {
+        font-size: 1rem;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    /* Dark background */
+    color: #e0e0e0;
+    /* Light text color */
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+    /* Dark navbar background */
+}
+
+body.dark-mode section {
+    background: #1f1f1f;
+    /* Dark section background */
+    color: #e0e0e0;
+    /* Light text color */
+}
+
+body.dark-mode .resume_button {
+    background-color: #008c95;
+    /* Darker button background for dark mode */
+    color: #ffffff;
+    /* Light text color */
+}
+
+/* Example of applying dark mode to headings and paragraphs */
+body.dark-mode h1.display-4 {
+    color: #ffffff;
+    /* Light heading color */
+}
+
+body.dark-mode p.lead {
+    color: #b0b0b0;
+    /* Light paragraph color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #222831;
+}
+
+footer {
+    background-color: #393e46;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222831;
+    color: #eeeeee;
+}
+
+.dark-mode .navbar {
+    background-color: #00adb5;
+}
+
+.dark-mode .navbar-brand {
+    background-color: #333;
+}
+
+.dark-mode .btn-outline-light {
+    border-color: #222831;
+    color: #222831;
+}
+
+.dark-mode .btn-outline-light:hover {
+    background-color: #222831;
+    color: #eeeeee;
+}
+
+.dark-mode footer {
+    background-color: #00adb5;
+}
+
+/* Additional Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+input,
+textarea,
+select {
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #00adb5;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .card {
+        margin: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* Base Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Education Section */
+#education {
+    background: linear-gradient(135deg, #00adb5 0%, #393e46 100%);
+    padding: 2rem 1rem;
+    /* Reduced padding */
+    border-radius: 12px;
+    /* Reduced border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Slightly reduced shadow */
+    color: #eeeeee;
+    margin-top: 2rem;
+    margin-bottom: 40px;
+    /* Add space below the section */
+}
+
+#education h2 {
+    font-size: 2rem;
+    /* Slightly smaller font size */
+    color: #eeeeee;
+    margin-bottom: 1.5rem;
+    /* Reduced bottom margin */
+    position: relative;
+}
+
+#education h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    /* Adjusted position */
+    width: 60px;
+    /* Reduced width */
+    height: 3px;
+    /* Reduced height */
+    background: #00adb5;
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+.card {
+    background: #333;
+    border-radius: 10px;
+    /* Reduced border radius */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    /* Slightly reduced shadow */
+    margin-bottom: 1rem;
+    /* Reduced bottom margin */
+}
+
+.card-body {
+    padding: 1.5rem;
+    /* Reduced padding */
+}
+
+.card-title {
+    font-size: 1.4rem;
+    /* Slightly smaller font size */
+    color: #00adb5;
+    margin-bottom: 0.75rem;
+    /* Reduced bottom margin */
+    transition: color 0.3s ease-in-out;
+}
+
+.card-title:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    /* Slightly smaller font size */
+    color: #cccccc;
+    transition: color 0.3s ease-in-out;
+}
+
+.card-text:hover {
+    color: #ffffff;
+}
+
+/* Hover Animation for Cards */
+.card:hover {
+    transform: scale(1.03);
+    /* Slightly reduced scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Slightly reduced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #education {
+        padding: 1.5rem 0.5rem;
+        /* Adjusted padding for smaller screens */
+    }
+
+    .card-body {
+        padding: 1.2rem;
+        /* Adjusted padding for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base Styles */
+#skills {
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    padding: 3rem 1rem;
+    /* Reduced padding for compactness */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+    /* Add space below the section */
+}
+
+#skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0.2;
+    pointer-events: none;
+    animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+#skills h3 {
+    text-align: center;
+    font-size: 2rem;
+    /* Reduced font size for compact view */
+    margin-bottom: 1.5rem;
+    color: #0d47a1;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Reduced letter-spacing for a tighter fit */
+    position: relative;
+    overflow: hidden;
+}
+
+#skills h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    /* Reduced height for compactness */
+    background: linear-gradient(to right, #00bcd4, #ff4081);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+.list-group {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    /* Reduced border-radius for compactness */
+    margin-bottom: 1rem;
+    /* Reduced margin for compact view */
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    /* Reduced font size */
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.list-group-item::before {
+    content: '➤  ';
+    position: absolute;
+    left: 0.5rem;
+    color: #71b0b2;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.list-group-item:hover {
+    background-color: #00bcd4;
+    color: #eb01e7;
+    transform: translateY(-5px) scale(1.02);
+    /* Reduced translate and scale for subtle hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2.5rem;
+    /* Increased padding on hover to reveal more space */
+    position: relative;
+    animation: hover-glow 1s ease-in-out;
+}
+
+@keyframes hover-glow {
+    0% {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transform: scale(1.03);
+    }
+
+    100% {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: scale(1);
+    }
+}
+
+.list-group-item:hover::before {
+    color: #eb01e7;
+    /* Change color on hover */
+    transform: translateY(-50%) scale(1.2);
+}
+
+#skills .col-md-4 {
+    flex: 1;
+    max-width: 22%;
+    /* Reduced max-width for more compact layout */
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    #skills .col-md-4 {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        /* Reduced margin for compact view */
+    }
+}
+
+#skills .col-md-4:nth-child(even) .list-group-item {
+    background-color: #f7f7f7;
+}
+
+#skills .col-md-4:nth-child(odd) .list-group-item {
+    background-color: #ffffff;
+}
+
+#skills .col-md-4:nth-child(1) .list-group-item {
+    border-color: #ff5722;
+    /* Vibrant color for Technical Skills */
+}
+
+#skills .col-md-4:nth-child(2) .list-group-item {
+    border-color: #4caf50;
+    /* Vibrant color for Tools */
+}
+
+#skills .col-md-4:nth-child(3) .list-group-item {
+    border-color: #2196f3;
+    /* Vibrant color for Library */
+}
+
+#skills .col-md-4:nth-child(4) .list-group-item {
+    border-color: #3200f8;
+    /* Vibrant color for Soft Skills */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    #skills .col-md-4 {
+        max-width: 100%;
+    }
+
+    #skills h3 {
+        font-size: 1.6rem;
+        /* Further reduced for small screens */
+    }
+
+    .list-group-item {
+        font-size: 0.9rem;
+        /* Further reduced font size for small screens */
+        padding: 0.8rem 1.8rem;
+        /* Adjusted padding for small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project Section Base Styles */
+#projects {
+    background: linear-gradient(135deg, #bfcae1, #e0e0e0);
+    padding: 2rem 1rem;
+    /* Adjusted padding */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Adjusted shadow */
+    margin-bottom: 40px;
+    /* Add space below the section */
+}
+
+/* Heading Styles */
+#projects h2 {
+    font-size: 2rem;
+    /* Adjusted font size */
+    color: #333;
+    margin-bottom: 1.5rem;
+    /* Adjusted margin */
+    position: relative;
+    overflow: hidden;
+}
+
+#projects h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #00bcd4, #ff4081);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.4s ease;
+}
+
+#projects h2:hover::after {
+    transform: scaleX(1);
+}
+
+/* Card Styles */
+#projects .card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#projects .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card-img-top{
+    height: 150px;
+    width: 250px;
+}
+
+.card .card-img-top{
+    height: 150px;
+    width: 250px;
+}
+
+#projects .card-body {
+    background: #fff;
+    border-top: 2px solid #00bcd4;
+    padding: 0.75rem;
+    /* Adjusted padding */
+}
+
+#projects .card-title {
+    color: #333;
+    font-size: 1.125rem;
+    /* Adjusted font size */
+    margin-bottom: 0.75rem;
+    /* Adjusted margin */
+}
+
+#projects .card-text {
+    color: #666;
+    font-size: 0.75rem;
+    /* Adjusted font size */
+    margin-bottom: 0.75rem;
+    /* Adjusted margin */
+}
+
+#projects .btn-primary {
+    background: #00bcd4;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    /* Adjusted padding */
+    font-size: 0.875rem;
+    /* Adjusted font size */
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#projects .btn-primary:hover {
+    background: #0097a7;
+    transform: translateY(-2px);
+}
+
+/* Hover Effects */
+#projects .card:hover {
+    transform: translateY(-8px);
+    /* Adjusted translation */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Adjusted shadow */
+}
+
+#projects .card:hover .card-img-top {
+    transform: scale(1.03);
+    /* Adjusted scale */
+}
+
+#projects .card:hover .card-body {
+    background: #f7f7f7;
+}
+
+/* Layout Styles */
+#projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* Adjusted gap */
+}
+
+.project_width_one,
+.project_width_two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* Consistent gap */
+}
+
+#projects .col-md-4 {
+    flex: 1 1 calc(25% - 0.5rem);
+    max-width: calc(25% - 0.5rem);
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    #projects .col-md-4 {
+        flex: 1 1 calc(33.33% - 0.5rem);
+        /* 3 columns */
+        max-width: calc(33.33% - 0.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    #projects .col-md-4 {
+        flex: 1 1 calc(50% - 0.5rem);
+        /* 2 columns */
+        max-width: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 576px) {
+    #projects .col-md-4 {
+        flex: 1 1 calc(100% - 0.5rem);
+        /* 1 column */
+        max-width: calc(100% - 0.5rem);
+    }
+
+    #projects h2 {
+        font-size: 1.75rem;
+        /* Further adjusted font size */
+    }
+
+    #projects .btn-primary {
+        font-size: 0.8rem;
+        /* Further adjusted font size */
+        padding: 0.4rem 0.8rem;
+        /* Further adjusted padding */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Achievements Section */
+.achievements_section {
+    padding: 3rem 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.achievements_section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for sections */
+.achievements_section_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Each section's width container */
+.achievements_section_width_one,
+.achievements_section_width_two,
+.achievements_section_width_three {
+    flex: 1 1 calc(33.333% - 1.5rem);
+    max-width: calc(33.333% - 1.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Ensure last section (single item) also fits well */
+.achievements_section_width_three {
+    flex: 1 1 calc(33.333% - 1.5rem);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .achievements_section_width_one,
+    .achievements_section_width_two,
+    .achievements_section_width_three {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Achievement Card */
+.achievement_card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.achievement_card h6 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.achievement_card p {
+    color: #666;
+    margin: 0;
+}
+
+/* Hover effects for cards */
+.achievement_card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+}
+
+.achievement_card:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    width: 0;
+    height: 0;
+    border-width: 1.5rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #007bff;
+    transition: right 0.4s ease, transform 0.4s ease;
+    transform: translateY(-50%);
+}
+
+.achievement_card:hover:after {
+    right: 0;
+    transform: translateY(-50%) rotate(15deg);
+}
+
+/* Add animations to hover */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.achievement_card:hover {
+    animation: bounce 1s ease;
+}
+
+/* Add a subtle background animation */
+@keyframes pulse {
+    0% {
+        background-color: #ffffff;
+    }
+
+    50% {
+        background-color: #f0f8ff;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+.achievement_card:hover {
+    animation: pulse 1s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base Styles for Section */
+#connect {
+    padding: 3rem 0;
+    border-radius: 10px;
+    background: transparent;
+    /* Ensure no background color */
+}
+
+/* Section Title */
+#connect h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    /* Make title bold */
+    text-transform: uppercase;
+    /* Uppercase title for emphasis */
+}
+
+/* Social Buttons Container */
+.connect_with_me_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    /* Space between buttons */
+}
+
+/* Social Button Styles */
+.social-button {
+    width: 60px;
+    /* Fixed size for buttons */
+    height: 60px;
+    /* Fixed size for buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* Circular buttons */
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    /* For animation effects */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border: 2px solid #ddd;
+    /* Light border for a clean look */
+    z-index: 1;
+    /* Ensure it is above other elements */
+}
+
+/* Social Link Styles */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    position: absolute;
+    /* Ensure it covers the button */
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* Ensure link is above the button */
+}
+
+/* Social Logo Styles */
+.social-logo {
+    width: 60%;
+    /* Slightly smaller logo for better fit */
+    height: 60%;
+    /* Slightly smaller logo for better fit */
+    object-fit: cover;
+    /* Ensures image covers button area without distortion */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Updated Hover Effects */
+.social-button:hover {
+    transform: scale(1.1);
+    /* Slightly scale button on hover */
+    background: #f0f4f8;
+    /* Light background color on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Add subtle shadow on hover */
+}
+
+/* Enhanced Hover Effects for Logo */
+.social-button:hover .social-logo {
+    transform: scale(1.2);
+    /* Slightly scale up the image on hover */
+    filter: brightness(1.3);
+    /* Increase brightness on hover */
+}
+
+/* Updated Glow Effect */
+.social-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+
+.social-button:hover::before {
+    transform: translate(-50%, -50%) scale(0.5px);
+    opacity: 1;
+}
+
+/* Light Mode Styles */
+#connect {
+    color: #333;
+    /* Dark text color for light mode */
+}
+
+/* Dark Mode Styles */
+body.dark-mode #connect {
+    color: #e0e0e0;
+    /* Light text color for dark mode */
+}
+
+body.dark-mode #connect h2 {
+    color: #ffffff;
+    /* Light heading color for dark mode */
+}
+
+/* Example for other text elements inside the section */
+body.dark-mode #connect p {
+    color: #b0b0b0;
+    /* Light paragraph color for dark mode */
+}
+
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+.social-button:hover {
+    animation: pulse 1s ease infinite;
+    /* Continuous pulse effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-button {
+        width: 50px;
+        /* Adjust size for smaller screens */
+        height: 50px;
+        /* Adjust size for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ensure element is visible */
+#theme-toggle {
+    display: inline; /* or another display property */
+}

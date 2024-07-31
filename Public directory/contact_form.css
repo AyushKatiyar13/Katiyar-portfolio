@@ -1,0 +1,238 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Contact Form Body Styles */
+.contact_form_body_css {
+    background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: relative; /* Added for animation */
+}
+
+/* Form Container Styles */
+.container_form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 13px 9px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* Added to ensure animations stay within bounds */
+}
+
+/* Hover Animation for Form Container */
+.container_form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f1f8f6;
+    animation: float 3s ease-in-out infinite, glow 1.5s infinite; /* Floating and glowing effect */
+}
+
+/* Floating Effect */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.8); }
+    50% { box-shadow: 0 0 15px rgba(255, 105, 180, 1); }
+    100% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.8); }
+}
+
+/* Theme Toggle Button Styles */
+#theme-toggle {
+    background-color: #8e24aa;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: pulse 2s infinite, bounce 1.5s infinite; /* Pulse and bounce effect */
+}
+
+#theme-toggle:hover {
+    background-color: #6d1f6d;
+    color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Pulse Effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: #f9fbe7;
+    color: #333;
+    padding: 12px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Input Focus Animation */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    background-color: #e8f5e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: shake 0.5s ease; /* Shake effect on focus */
+    transform: scale(1.01); /* Slight scale on focus */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Submit Button Styles */
+button[type="submit"] {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounce 2s infinite, pulse 1.5s infinite; /* Bounce and pulse effect */
+}
+
+button[type="submit"]:hover {
+    background-color: #388e3c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Animation for Background */
+.container_form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #ffffff, #e0f7fa);
+    z-index: -1;
+    opacity: 0.6;
+    animation: pulse-background 8s infinite; /* Background pulse animation */
+}
+
+@keyframes pulse-background {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.05); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background: linear-gradient(to bottom, #263238, #37474f);
+    color: #e0e0e0;
+}
+
+.dark-mode .container_form {
+    background-color: #424242;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out; /* Fade-in effect */
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="email"],
+.dark-mode textarea {
+    background-color: #546e7a;
+    color: #e0e0e0;
+    border: 1px solid #78909c;
+}
+
+/* Dark Mode Placeholder Styles */
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #b0bec5; /* Light grey for visibility on dark backgrounds */
+}
+
+/* Dark Mode Submit Button Styles */
+.dark-mode button[type="submit"] {
+    background-color: #64ffda;
+    color: #ffffff;
+    animation: pulse-dark 2s infinite; /* Dark mode pulse effect */
+}
+
+.dark-mode button[type="submit"]:hover {
+    background-color: #4caf50;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Theme Toggle Button Styles */
+.dark-mode #theme-toggle {
+    background-color: #7e57c2;
+    color: #e0e0e0;
+    animation: pulse-dark 2s infinite; /* Dark mode pulse effect */
+}
+
+.dark-mode #theme-toggle:hover {
+    background-color: #5e35b1;
+    color: #ffffff;
+}
+
+/* Dark Mode Pulse Effect */
+@keyframes pulse-dark {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Fade-In Effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

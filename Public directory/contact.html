@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message me</title>
+    <link rel="stylesheet" href="contact_form.css" />
+</head>
+
+<body class="contact_form_body_css">
+    <div class="container_form">
+        <button id="theme-toggle">Dark Mode</button>
+
+        <form id="contactForm" method="post" action="script.js">
+            <input type="text" name="name" id="name" placeholder="Your Name" required autocomplete="name" />
+            <input type="email" name="email" id="email" placeholder="Your Email" required autocomplete="email" />
+            <textarea name="message" id="message" placeholder="Your Message" required autocomplete="off"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
