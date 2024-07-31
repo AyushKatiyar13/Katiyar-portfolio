@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("Sending data:", JSON.stringify(jsonData));
 
-      fetch("https://new-portfolio-lfys.onrender.com", { // Updated URL to your server
+      fetch("https://new-portfolio-lfys.onrender.com/send", { // Ensure this URL is correct
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -148,3 +148,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Contact form element not found.");
   }
 });
+
