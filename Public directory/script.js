@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("Sending data:", JSON.stringify(jsonData));
 
-      fetch("http://localhost:3000/send", {
+      fetch("https://ayushkatiyar13.github.io/New-portfolio/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
