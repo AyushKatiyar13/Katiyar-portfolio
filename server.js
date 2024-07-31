@@ -113,8 +113,8 @@ app.use(express.static(path.join(__dirname)));
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER, // Ensure these are set in your environment
-        pass: process.env.EMAIL_PASS  // Ensure these are set in your environment
+        user: process.env.EMAIL_USER, // Use environment variable
+        pass: process.env.EMAIL_PASS  // Use environment variable
     }
 });
 
@@ -126,17 +126,18 @@ app.get('/', (req, res) => {
 // Handle form submission
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
-    console.log(req.body);
+    console.log('Received request:', req.body);
+
     const mailOptions = {
         from: email,
-        to: process.env.EMAIL_USER, // Ensure this is set correctly
+        to: process.env.EMAIL_USER, // Use environment variable
         subject: `Message from ${name}`,
         text: message
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log('Error:', error);
+            console.error('Error sending email:', error);
             return res.status(500).send('Error sending email');
         }
         console.log('Email sent:', info.response);
@@ -149,5 +150,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
-
-
