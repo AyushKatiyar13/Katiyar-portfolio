@@ -17,7 +17,7 @@ app.use(cors())
 app.use(express.json())
 
 // Serve static files
-app.use(express.static(path.join(__dirname, 'Public directory')));
+app.use(express.static(path.join(__dirname)));
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Public directory', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Handle form submission
