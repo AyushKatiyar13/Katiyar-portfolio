@@ -55,8 +55,7 @@ app.post('/send', (req, res) => {
 });
 
 
-const cors = require('cors');
-const app = express();
+
 
 // Configure CORS to allow requests from your GitHub Pages domain
 app.use(cors({
