@@ -54,8 +54,27 @@ app.post('/send', (req, res) => {
     });
 });
 
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// Configure CORS to allow requests from your GitHub Pages domain
+app.use(cors({
+  origin: 'https://ayushkatiyar13.github.io'
+}));
+
+// Other middleware (e.g., bodyParser, static files)
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+
+// Define your routes
+// app.get('/', (req, res) => {
+//   res.send('Hello World');
+// });
+
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
