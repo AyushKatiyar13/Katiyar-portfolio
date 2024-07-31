@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Handle form submission
+
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
@@ -124,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("Sending data:", JSON.stringify(jsonData));
 
-      fetch("https://new-portfolio-lfys.onrender.com/send", { // Updated URL to match your server endpoint
+      fetch("https://new-portfolio-lfys.onrender.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -148,3 +149,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Contact form element not found.");
   }
 });
+
