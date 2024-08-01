@@ -44,7 +44,7 @@ body {
 }
 
 .lead {
-    margin-left: 120px;
+    /* margin-left: 120px; */
     font-size: 1.2rem;
     transition: color 0.3s, border-color 0.3s;
     border-bottom: 2px solid transparent;
@@ -66,7 +66,10 @@ body {
 
 
 
-
+.col-md-6{
+    margin-left: auto;
+    margin-top: 70px;
+}
 
 /* Base Styles */
 body {
@@ -101,7 +104,7 @@ h1.display-4 {
     animation: bounce 2s infinite;
     text-align: center;
     font-weight: bold;
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 
 /* Bounce Animation */
@@ -155,9 +158,15 @@ p.lead span.highlight {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
+.resume_msg_button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* Resume Button */
 .resume_button {
-    display: inline-block;
+    /* display: inline-block; */
     padding: 10px 20px;
     font-size: 1.2rem;
     color: #ffffff;
@@ -170,7 +179,7 @@ p.lead span.highlight {
     transition: transform 0.3s ease;
     animation: blink 1.5s infinite;
     /* Blinking effect */
-    margin-left: 158px;
+    /* margin-left: 158px; */
 }
 .resume_button{
     /* display: flex; */
