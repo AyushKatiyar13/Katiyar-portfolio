@@ -1162,14 +1162,13 @@ body {
     justify-content: center;
     border-radius: 50%;
     /* Circular buttons */
-    background: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    background: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     /* For animation effects */
     cursor: pointer;
     /* Pointer cursor on hover */
-    border: 2px solid #ddd;
-    /* Light border for a clean look */
     z-index: 1;
     /* Ensure it is above other elements */
 }
@@ -1205,8 +1204,7 @@ body {
 .social-button:hover {
     transform: scale(1.1);
     /* Slightly scale button on hover */
-    background: #f0f4f8;
-    /* Light background color on hover */
+    background: transparent; /* Ensure background remains transparent */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     /* Add subtle shadow on hover */
 }
@@ -1236,7 +1234,7 @@ body {
 }
 
 .social-button:hover::before {
-    transform: translate(-50%, -50%) scale(0.5px);
+    transform: translate(-50%, -50%) scale(0.5);
     opacity: 1;
 }
 
@@ -1262,7 +1260,6 @@ body.dark-mode #connect p {
     color: #b0b0b0;
     /* Light paragraph color for dark mode */
 }
-
 
 /* Pulse Animation */
 @keyframes pulse {
@@ -1296,6 +1293,7 @@ body.dark-mode #connect p {
         /* Adjust size for smaller screens */
     }
 }
+
 
 
 
