@@ -803,19 +803,44 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-#projects .card-img-top {
-    transition: transform 0.3s ease;
+/* Ensures that the project cards are displayed in a responsive grid */
+#projects .row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.card-img-top{
-    height: 150px;
-    width: 250px;
+.card {
+    overflow: hidden; /* Ensures any overflow from scaling or content is hidden */
 }
 
-.card .card-img-top{
-    height: 150px;
-    width: 250px;
+/* Ensures images inside the card scale appropriately */
+.card-img-top {
+    width: 100%;         /* Image takes full width of the container */
+    height: auto;        /* Height adjusts automatically based on width */
+    max-width: 100%;     /* Ensure image does not exceed container width */
+    max-height: 150px;   /* Restrict maximum height to avoid large images */
+    object-fit: cover;   /* Ensure image covers the container while maintaining aspect ratio */
+    transition: transform 0.3s ease; /* Smooth scaling transition on hover */
 }
+
+/* Optional: Add hover effect for scaling */
+.card-img-top:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Ensure proper spacing and alignment within each card */
+.card-body {
+    padding: 1rem; /* Adjust padding as needed */
+}
+
+/* Optional: Add responsive padding to the container */
+.container {
+    padding-left: 15px; /* Adjust padding as needed */
+    padding-right: 15px; /* Adjust padding as needed */
+}
+
+
+
 
 #projects .card-body {
     background: #fff;
