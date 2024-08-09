@@ -810,6 +810,9 @@ body {
 
 .card {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* Ensures images inside the card scale appropriately */
@@ -831,6 +834,9 @@ body {
 /* Ensure proper spacing and alignment within each card */
 .card-body {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 /* Ensure the card body expands to fill the remaining space */
@@ -838,8 +844,6 @@ body {
     background: #fff;
     border-top: 2px solid #00bcd4;
     padding: 0.75rem;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Card Title and Text Styles */
@@ -855,6 +859,7 @@ body {
     margin-bottom: 0.75rem;
 }
 
+/* Button Styles */
 #projects .btn-primary {
     background: #00bcd4;
     border: none;
@@ -933,6 +938,18 @@ body {
         padding: 0.4rem 0.8rem;
     }
 }
+
+/* Ensure the "View Project" button is at the bottom of the card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-body .btn-primary {
+    margin-top: auto;
+}
+
 
 
 
