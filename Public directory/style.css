@@ -559,7 +559,7 @@ body {
 .list-group-item::before {
     content: '➤  ';
     position: absolute;
-    left: 0.5rem;
+    left: 0.2rem;
     color: #71b0b2;
     font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
