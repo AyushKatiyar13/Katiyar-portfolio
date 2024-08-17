@@ -66,6 +66,161 @@ body {
 
 
 
+/* Base Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Fluid */
+.container-fluid {
+    padding: 5rem 1rem;
+}
+
+/* Welcome Section */
+section {
+    background: #ffffff;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px; /* Set max-width to limit the section's width */
+    margin-left: auto;
+    margin-right: auto; /* Center align the section */
+}
+
+/* Heading Animation */
+h1.display-4 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Paragraph Styling */
+p.lead {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* Highlighted Text */
+p.lead span.highlight {
+    color: #00adb5;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Profile Photo Animation */
+.img-fluid {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-fluid:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.resume_msg_button {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Resume Button */
+.resume_button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #00adb5;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: blink 1.5s infinite;
+}
+
+.resume_button:hover {
+    transform: scale(1.05);
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+
+    p.lead {
+        font-size: 1rem;
+    }
+
+    .resume_msg_button {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode section {
+    background: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-mode .resume_button {
+    background-color: #008c95;
+    color: #ffffff;
+}
+
+body.dark-mode h1.display-4 {
+    color: #ffffff;
+}
+
+body.dark-mode p.lead {
+    color: #b0b0b0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Base Styles */
@@ -161,117 +316,6 @@ body.dark-mode {
 body.dark-mode section {
     background: none; /* Ensure no background */
     color: #e0e0e0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 0.25rem;
-}
-
-.btn-outline-light {
-    border-color: #ffffff;
-    color: #ffffff;
-}
-
-.btn-outline-light:hover {
-    background-color: #ffffff;
-    color: #222831;
-}
-
-footer {
-    background-color: #393e46;
-    padding: 1rem;
-    text-align: center;
-}
-
-/* Dark Mode Styles */
-.dark-mode {
-    background-color: #222831;
-    color: #eeeeee;
-}
-
-.dark-mode .navbar {
-    background-color: #00adb5;
-}
-
-.dark-mode .navbar-brand {
-    background-color: #333;
-}
-
-.dark-mode .btn-outline-light {
-    border-color: #222831;
-    color: #222831;
-}
-
-.dark-mode .btn-outline-light:hover {
-    background-color: #222831;
-    color: #eeeeee;
-}
-
-.dark-mode footer {
-    background-color: #00adb5;
-}
-
-/* Additional Styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
-form {
-    margin: 1rem 0;
-}
-
-input,
-textarea,
-select {
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: #00adb5;
-    outline: none;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.5rem;
-    }
-
-    .card {
-        margin: 0.5rem;
-    }
 }
 
 
