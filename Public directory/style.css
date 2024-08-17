@@ -66,15 +66,13 @@ body {
 
 
 
-.col-md-6{
-    margin-left: auto;
-    margin-top: 70px;
-}
+
 
 /* Base Styles */
 body {
     font-family: "Arial", sans-serif;
     background-color: #f0f4f8;
+    background: transparent;
     color: #333;
     margin: 0;
     padding: 0;
@@ -83,11 +81,12 @@ body {
 /* Container Fluid */
 .container-fluid {
     padding: 5rem 1rem;
+    margin-top: 70px; /* Increased top margin */
 }
 
 /* Welcome Section */
 section {
-    background: #ffffff;
+    background: none; /* Removed background */
     padding: 4rem 2rem;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -96,35 +95,17 @@ section {
     overflow: hidden;
 }
 
-/* Heading Animation */
+/* Heading and Paragraph Alignment */
+h1.display-4, p.lead, .resume_msg_button {
+    text-align: left;
+}
+
 h1.display-4 {
     font-size: 3rem;
     color: #333;
     margin: 40px 0 1rem;
     animation: bounce 2s infinite;
-    text-align: center;
     font-weight: bold;
-    /* margin-left: 100px; */
-}
-
-/* Bounce Animation */
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-30px);
-    }
-
-    60% {
-        transform: translateY(-15px);
-    }
 }
 
 /* Paragraph Styling */
@@ -132,8 +113,6 @@ p.lead {
     font-size: 1.2rem;
     color: #555;
     line-height: 1.6;
-    text-align: center;
-    margin-top: 0;
     font-weight: normal;
 }
 
@@ -144,7 +123,7 @@ p.lead span.highlight {
     font-size: 1.25rem;
 }
 
-/* Profile Photo Animation */
+/* Profile Photo */
 .img-fluid {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: block;
@@ -153,118 +132,35 @@ p.lead span.highlight {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.img-fluid:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-.resume_msg_button{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* Resume Button */
+/* Button Styling */
 .resume_button {
-    /* display: inline-block; */
     padding: 10px 20px;
     font-size: 1.2rem;
     color: #ffffff;
     background-color: #00adb5;
     border: none;
     border-radius: 5px;
-    text-align: center;
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.3s ease;
     animation: blink 1.5s infinite;
-    /* Blinking effect */
-    /* margin-left: 158px; */
 }
-.resume_button{
-    /* display: flex; */
-    width: auto;
-}
+
 .resume_button:hover {
     transform: scale(1.05);
     color: #000000;
     text-decoration: none;
 }
 
-/* Blinking Animation */
-@keyframes blink {
-
-    0%,
-    100% {
-        background-color: #00adb5;
-        opacity: 1;
-    }
-
-    50% {
-        background-color: #008c95;
-        opacity: 0.7;
-    }
-}
-
-/* Remove Extra Background and Border Effects */
-body,
-section {
-    border: none;
-    background: transparent;
-}
-
-section {
-    border: none;
-    background-color: transparent;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1.display-4 {
-        font-size: 2.5rem;
-    }
-
-    p.lead {
-        font-size: 1rem;
-    }
-}
-
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #121212;
-    /* Dark background */
     color: #e0e0e0;
-    /* Light text color */
-}
-
-body.dark-mode .navbar {
-    background-color: #333;
-    /* Dark navbar background */
 }
 
 body.dark-mode section {
-    background: #1f1f1f;
-    /* Dark section background */
+    background: none; /* Ensure no background */
     color: #e0e0e0;
-    /* Light text color */
-}
-
-body.dark-mode .resume_button {
-    background-color: #008c95;
-    /* Darker button background for dark mode */
-    color: #ffffff;
-    /* Light text color */
-}
-
-/* Example of applying dark mode to headings and paragraphs */
-body.dark-mode h1.display-4 {
-    color: #ffffff;
-    /* Light heading color */
-}
-
-body.dark-mode p.lead {
-    color: #b0b0b0;
-    /* Light paragraph color */
 }
 
 
