@@ -326,123 +326,155 @@ body.dark-mode section {
 
 
 
-
-/* Base Styles */
-body {
-    font-family: "Arial", sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+/* -----------------------------------------------------Education section--------------------------------------------- */
 
 /* Education Section */
 #education {
-    background: linear-gradient(135deg, #00adb5 0%, #393e46 100%);
-    padding: 2rem 1rem;
-    /* Reduced padding */
-    border-radius: 12px;
-    /* Reduced border radius */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Slightly reduced shadow */
-    color: #eeeeee;
-    margin-top: 2rem;
-    margin-bottom: 40px;
-    /* Add space below the section */
-}
-
-#education h2 {
-    font-size: 2rem;
-    /* Slightly smaller font size */
-    color: #eeeeee;
-    margin-bottom: 1.5rem;
-    /* Reduced bottom margin */
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #e3e3e3, #f8f8f8);
+    text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
-#education h2::after {
+/* Background Floating Effect */
+#education::before {
     content: '';
     position: absolute;
-    left: 50%;
-    bottom: -8px;
-    /* Adjusted position */
-    width: 60px;
-    /* Reduced width */
-    height: 3px;
-    /* Reduced height */
-    background: #00adb5;
-    border-radius: 2px;
-    transform: translateX(-50%);
+    top: -60px;
+    left: -60px;
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 105, 180, 0.2);
+    border-radius: 50%;
+    animation: floatBg 6s infinite alternate ease-in-out;
 }
 
-/* Column Styles */
-#education .col-md-12 {
-    margin-bottom: 2px;
-    /* Added 2px gap between columns */
+#education::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
+    width: 140px;
+    height: 140px;
+    background: rgba(0, 123, 255, 0.3);
+    border-radius: 50%;
+    animation: floatBg 7s infinite alternate ease-in-out;
 }
 
-.card {
-    background: #333;
-    border-radius: 10px;
-    /* Reduced border radius */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    /* Slightly reduced shadow */
-    margin-bottom: 1rem;
-    /* Reduced bottom margin */
+/* Floating Animation */
+@keyframes floatBg {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(15px) translateX(15px); }
 }
 
-.card-body {
-    padding: 1.5rem;
-    /* Reduced padding */
-}
-
-.card-title {
-    font-size: 1.4rem;
-    /* Slightly smaller font size */
-    color: #00adb5;
-    margin-bottom: 0.75rem;
-    /* Reduced bottom margin */
-    transition: color 0.3s ease-in-out;
-}
-
-.card-title:hover {
-    color: #ffffff;
+/* Section Title */
+#education h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    color: #222;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    transition: color 0.4s ease-in-out;
 }
 
-.card-text {
-    font-size: 1.1rem;
-    /* Slightly smaller font size */
-    color: #cccccc;
+#education h2:hover {
+    color: #ff69b4;
+}
+
+/* Education Container */
+#education .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Education Cards */
+#education .card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    text-align: left;
+    border-left: 6px solid #ff69b4;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+#education .card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-left-color: #007bff;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+}
+
+/* Animated Line */
+#education .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #ff69b4;
+    transition: width 0.4s ease-in-out;
+}
+
+#education .card:hover::before {
+    width: 100%;
+    background: rgba(0, 123, 255, 0.2);
+}
+
+/* Education Details */
+#education .card-title {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+    color: #ff69b4;
     transition: color 0.3s ease-in-out;
 }
 
-.card-text:hover {
-    color: #ffffff;
+#education .card:hover .card-title {
+    color: #007bff;
 }
 
-/* Hover Animation for Cards */
-.card:hover {
-    transform: scale(1.03);
-    /* Slightly reduced scale */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    /* Slightly reduced shadow */
+#education .card-text {
+    font-size: 1.2rem;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Subtle Text Animation */
+#education .card:hover .card-text {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #education {
-        padding: 1.5rem 0.5rem;
-        /* Adjusted padding for smaller screens */
-    }
-
-    .card-body {
-        padding: 1.2rem;
-        /* Adjusted padding for smaller screens */
+    #education .card {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 
+/* -----------------------------------------------------Education section--------------------------------------------- */
 
 
 
@@ -461,6 +493,8 @@ body {
 
 
 
+
+/* ----------------------------------------------------------sills---------------------------------------------------- */
 
 /* Base Styles */
 #skills {
@@ -666,34 +700,7 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ----------------------------------------------------------sills---------------------------------------------------- */
 
 /* Project Section Base Styles */
 #projects {
@@ -1251,29 +1258,182 @@ body.dark-mode #connect p {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Ensure element is visible */
 #theme-toggle {
     display: inline; /* or another display property */
 }
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------experience and company----------------------------------- */
+
+/* Experience Section */
+#experience {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background floating effect */
+#experience::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 123, 255, 0.2);
+    border-radius: 50%;
+    animation: floating 6s infinite alternate ease-in-out;
+}
+
+#experience::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 123, 255, 0.3);
+    border-radius: 50%;
+    animation: floating 7s infinite alternate ease-in-out;
+}
+
+/* Floating animation */
+@keyframes floating {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(20px) translateX(20px); }
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    transition: color 0.4s ease-in-out;
+}
+
+.section-title:hover {
+    color: #007bff;
+}
+
+/* Experience Container */
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+/* Individual Experience Card */
+.experience-card {
+    flex: 1 1 calc(50% - 1.8rem);
+    max-width: calc(50% - 1.8rem);
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    text-align: left;
+    border-left: 6px solid #007bff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+.experience-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-left-color: #ff6b6b;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+}
+
+/* Animated Line */
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #007bff;
+    transition: width 0.4s ease-in-out;
+}
+
+.experience-card:hover::before {
+    width: 100%;
+    background: rgba(255, 107, 107, 0.2);
+}
+
+/* Experience Details */
+.experience-card h3 {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.experience-card:hover h3 {
+    color: #ff6b6b;
+}
+
+.experience-card .position {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.experience-card .duration,
+.experience-card .location {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.experience-card .description {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Subtle Text Animation */
+.experience-card:hover .description {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* -------------------------------------------experience and company----------------------------------- */
