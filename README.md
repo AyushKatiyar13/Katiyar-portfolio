@@ -1,4 +1,4 @@
-# Ayush Katiyar's Portfolio-
+# Ayush Katiyar's Portfolio
 
 Welcome to my portfolio website repository! This project highlights my skills and experience as a web developer. Below, you'll find details about the technologies used, the project structure, and how to explore my work.
 
